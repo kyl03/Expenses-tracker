@@ -1,3 +1,238 @@
-button {
-    display: block;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    background-repeat: no-repeat;
 }
+
+/* CSS variables */
+:root {
+    --header-color: #57a4a4;
+    --header-text-color: #003B36;
+    font-size: 16px;
+}
+
+section {
+    overflow: hidden;
+    white-space: wrap;
+    word-break: break-word;
+    text-align: center;
+    margin-top: 1rem;
+
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+}
+
+hr {
+    /* margin-right: 3rem;
+    margin-left: 3rem; */
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+header {
+    height: 70px;
+    font-size: xx-large;
+}
+
+div {
+    margin: 2rem;
+}
+
+h2 {
+    color: var(--header-color);
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: large;
+}
+
+h1 {
+    color: var(--header-text-color);
+    font-weight: 900;
+    text-align: center;
+    /* font-family: "Audiowide", sans-serif; */
+    font-size: xx-large;
+    display: flexbox;
+    justify-content: baseline;
+}
+
+h3,
+h4 {
+    font-weight: 600;
+    white-space: nowrap;
+    text-overflow: clip;
+    margin: 0.4rem;
+
+}
+
+table,
+hr {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+ 
+    width: 80%;
+
+}
+th{
+    width: 50%;
+    white-space: nowrap;
+    text-overflow: clip;
+   
+
+
+}
+
+td {
+    font-weight: thick;
+    padding: 0.5rem;
+   
+
+    
+  
+}
+
+
+.card {
+    margin-left: auto;
+    margin-left: auto;
+    padding: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+
+}
+
+
+.start {
+    text-align: start;
+
+    height: fit-content;
+    width: 70%;
+    border-left:1px solid grey;
+    border-top:1px solid grey;
+    border-bottom:1px solid grey;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+
+}
+
+.end {
+    text-align: end;
+    width: 20%;
+    white-space: nowrap;
+    text-overflow: clip;
+    border-top:1px solid grey;
+    border-bottom:1px solid grey;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+input {
+    margin: 0.40rem;
+    padding: 0.4rem;
+    width: 50%;
+}
+
+button {
+    text-align: center;
+    padding: 0.4rem;
+    border-radius: 5px;
+    border-style: hidden;
+    background-color: var(--header-color);
+    color: var(--header-text-color);
+    font-weight: 600;
+    font-size: small;
+
+  
+}
+.btn{
+    background-color: var(--header-color);
+    /* background-image: url(./delete.png); */
+    white-space: nowrap;
+    text-overflow: clip;
+    margin: 0.25rem;
+}
+
+#totalAmount {
+    margin-top: 0.5rem;
+    color: black;
+    font-size: xx-large;
+}
+
+#totalIncome {
+    color: rgb(59, 228, 59);
+    font-weight: 600;
+    border-right: 1px solid rgb(51, 49, 49);
+
+}
+
+#totalExpenses {
+    color: rgb(232, 14, 14);
+    font-weight: 600;
+}
+button:hover {
+    background-color: var(--header-text-color);
+    color: var(--header-color);
+}
+
+
+
+
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    header {
+        height: 80px;
+        font-size: xx-large;
+    }
+
+    table,
+    hr {
+        width: 60%;
+    }
+
+   
+    h1 {
+
+        font-size: 40PX;
+    }
+    h2{
+        font-size: 30PX;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+    #mainTable{
+        height: 100px;
+    }
+    body{
+        font-size: 20px;
+    }
+    input{
+        width: 30%;
+    }
+
+ 
+
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {}

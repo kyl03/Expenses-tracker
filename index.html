@@ -1,50 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Twitter Clone</title>
-    <link rel="stylesheet" href="./style.css">
-  </head>
-  <body>
-    <h1>Control de Gastos</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Control de gastos</title>
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./style.css">
+<body>
+  <header>
+    <div>
+      <h1>Control de Gastos</h1>
+    </div>
+
+  </header>
+  <section>
     <h2>Tu ahorro</h2>
-    <h3 id="totalAmount">0</h3>
-    <section>
-        <!-- TODO: mostrar gastos e ingresos en tabla -->
-        <table style="width:50%" id="mainTable">
-            <tr>
-              <th>Ingresos</th>
-              <th>Gastos</th>
-            </tr>
-            <tr>
-                <th id="totalIncome">0</th>
-                <th id="totalExpenses">0</th>
-              </tr>
-    
-          </table>
-    </section>
-    <section>
-        <h2>Historial</h2>
-        <table style="width:50%" id="transactionsTable">
-            <tr>
-              <th>Concepto</th>
-              <th>Cantidad</th>
-            </tr>
-          </table>
-        <hr>
-        <h2>Añadir nueva transacción</h2>
-        <hr>
-        <h3>Concepto</h3>
-        <input type="text" id="conceptInput" placeholder="Escribe un concepto">
-        <h3>Cantidad</h3>
-        <p>Negativo-gasto, Positivo-ingreso</p>
-        <input type="text" id="amountInput" placeholder="Introduce cantidad">
-        <button id="addTransactionBtn">Añadir transacción</button>
-    </section>
-    <script src="./control-gastos.js"></script>
-  </body>
+    <h2 id="totalAmount">0</h2>
+  </section>
+  <!-- TODO: mostrar gastos e ingresos en tabla -->
+  <section>
+    <table id="mainTable" class="card">
+      <tr>
+        <th>Ingresos</th>
+        <th>Gastos</th>
+      </tr>
+      <tr>
+        <th id="totalIncome">0</th>
+        <th id="totalExpenses">0</th>
+      </tr>
+
+    </table>
+  </section>
+
+  <section>
+    <h2>Historial</h2>
+    <hr>
+    <table id="transactionsTable">
+
+    </table>
+    <hr>
+  </section>
+  <section class="addNewTransaction">
+    <h2>Añadir nueva transacción</h2>
+    <hr>
+
+    <h3>Concepto</h3>
+    <input type="text" id="conceptInput" placeholder="Escribe un concepto">
+
+
+    <h3>Cantidad</h3>
+    <h4>Negativo-gasto, Positivo-ingreso</h4>
+    <input type="text" id="amountInput" placeholder="Introduce cantidad">
+    <div>
+      <button id="addTransactionBtn">Añadir transacción</button>
+    </div>
+  </section>
+  </div>
+  </div>
+
+
+
+  <script src="./control-gastos.js"></script>
+</body>
 
 </html>
