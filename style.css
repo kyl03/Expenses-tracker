@@ -1,7 +1,8 @@
 * {
     box-sizing: border-box;
-    margin: 0;
+  
     background-repeat: no-repeat;
+
 }
 
 /* CSS variables */
@@ -11,40 +12,39 @@
     font-size: 16px;
 }
 
+
+
 section {
     overflow: hidden;
-    white-space: wrap;
     word-break: break-word;
-    text-align: center;
     margin-top: 1rem;
 
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   
+    margin: 2.5rem;
 }
 
 hr {
     /* margin-right: 3rem;
     margin-left: 3rem; */
     margin-top: 1rem;
-    margin-bottom: 0.5rem;
 }
 
 header {
-    height: 70px;
+    height: 50px;
     font-size: xx-large;
 }
 
 div {
-    margin: 2rem;
+    margin: 1rem;
 }
 
 h2 {
     color: var(--header-color);
     font-weight: 900;
-    text-align: center;
+  
     margin-bottom: 0.5rem;
     font-size: large;
 }
@@ -54,9 +54,9 @@ h1 {
     font-weight: 900;
     text-align: center;
     /* font-family: "Audiowide", sans-serif; */
-    font-size: xx-large;
-    display: flexbox;
-    justify-content: baseline;
+    font-size: x-large;
+    white-space: nowrap;
+    text-overflow: clip;
 }
 
 h3,
@@ -68,22 +68,21 @@ h4 {
 
 }
 
-table,
-hr {
+table {
     margin-top: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     margin-left: auto;
     margin-right: auto;
     border-collapse: separate;
- 
-    width: 80%;
+    width: 100%;
+  
 
 }
 th{
     width: 50%;
     white-space: nowrap;
     text-overflow: clip;
-   
+    padding: 0.5rem;
 
 
 }
@@ -102,7 +101,7 @@ td {
     margin-left: auto;
     margin-left: auto;
     padding: 0.5rem;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     margin-bottom: 1rem;
 
@@ -141,13 +140,14 @@ input {
 
 button {
     text-align: center;
-    padding: 0.4rem;
+    padding: 0.6rem;
     border-radius: 5px;
     border-style: hidden;
     background-color: var(--header-color);
-    color: var(--header-text-color);
+    color: white;
     font-weight: 600;
     font-size: small;
+    width: 100%;
 
   
 }
@@ -157,28 +157,34 @@ button {
     white-space: nowrap;
     text-overflow: clip;
     margin: 0.25rem;
+    width: fit-content;
+    padding: 0.4rem;
 }
 
 #totalAmount {
+    font-weight: 400;
     margin-top: 0.5rem;
     color: black;
-    font-size: xx-large;
+    font-size: x-large;
 }
 
 #totalIncome {
     color: rgb(59, 228, 59);
-    font-weight: 600;
+    font-weight: 400;
     border-right: 1px solid rgb(51, 49, 49);
+    padding: 0.5rem;
 
 }
 
 #totalExpenses {
     color: rgb(232, 14, 14);
-    font-weight: 600;
+    font-weight: 400;
+    padding: 0.5rem;
 }
 button:hover {
     background-color: var(--header-text-color);
     color: var(--header-color);
+    
 }
 
 
@@ -191,10 +197,7 @@ button:hover {
 @media (min-width: 576px) {}
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
+@media (min-width: 768px) {
     header {
         height: 80px;
         font-size: xx-large;
@@ -205,7 +208,10 @@ button:hover {
         width: 60%;
     }
 
-   
+    .card{
+        width: 35%;
+        padding: 1rem;
+    }
     h1 {
 
         font-size: 40PX;
@@ -222,10 +228,21 @@ button:hover {
     }
     body{
         font-size: 20px;
+        text-align: center;
     }
     input{
         width: 30%;
     }
+    button{
+        font-size: medium;
+        width: fit-content;
+        padding: 1.5rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
 
  
 

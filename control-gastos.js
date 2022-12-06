@@ -98,7 +98,7 @@ function showTransaction(transaction, arrayPosition) {
     }
     transactionElement.innerHTML =
         `
-    <td class="start">${arrayPosition}. ${transaction.concept}</td>
+    <td class="start">${transaction.concept}</td>
     <td class="end" style="border-right: ${borderRight}">${transaction.amount}</td>
     <button class="btn"onclick="removeTransaction(${transaction.id})">Borrar</button>
     `;
