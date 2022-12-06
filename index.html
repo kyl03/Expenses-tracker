@@ -8,6 +8,7 @@
   <title>Control de gastos</title>
   <link rel="stylesheet" href="./reset.css">
   <link rel="stylesheet" href="./style.css">
+
 <body>
   <header>
     <div>
@@ -17,7 +18,7 @@
   </header>
   <section>
     <h2>Tu ahorro</h2>
-    <h2 id="totalAmount">0</h2>
+    <h3 id="totalAmount">0</h3>
   </section>
   <!-- TODO: mostrar gastos e ingresos en tabla -->
   <section>
@@ -38,21 +39,20 @@
     <h2>Historial</h2>
     <hr>
     <table id="transactionsTable">
-
     </table>
-    <hr>
+
   </section>
   <section class="addNewTransaction">
     <h2>Añadir nueva transacción</h2>
     <hr>
 
     <h3>Concepto</h3>
-    <input type="text" id="conceptInput" placeholder="Escribe un concepto">
+    <input type="text" id="conceptInput" placeholder="Añade concepto">
 
 
     <h3>Cantidad</h3>
-    <h4>Negativo-gasto, Positivo-ingreso</h4>
-    <input type="text" id="amountInput" placeholder="Introduce cantidad">
+    <h4>(negativo-gasto, positivo-ingreso)</h4>
+    <input type="number" id="amountInput" placeholder="Introduce cantidad">
     <div>
       <button id="addTransactionBtn">Añadir transacción</button>
     </div>
