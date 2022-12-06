@@ -199,6 +199,10 @@ button:hover {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+    body{
+        font-size: 20px;
+        text-align: center;
+    }
     header {
         height: 80px;
         font-size: xx-large;
@@ -212,6 +216,8 @@ button:hover {
     .card{
         width: 35%;
         padding: 1rem;
+        margin-left: auto;
+        margin-right: auto;
     }
     h1 {
 
@@ -227,10 +233,7 @@ button:hover {
     #mainTable{
         height: 100px;
     }
-    body{
-        font-size: 20px;
-        text-align: center;
-    }
+
     input{
         width: 30%;
     }
