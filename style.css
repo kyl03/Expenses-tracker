@@ -182,11 +182,7 @@ button {
     font-weight: 400;
     padding: 0.5rem;
 }
-button:hover {
-    background-color: var(--header-text-color);
-    color: var(--header-color);
-    
-}
+
 
 
 
@@ -247,10 +243,11 @@ button:hover {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-
-
- 
-
+    button:hover {
+        background-color: var(--header-text-color);
+        color: var(--header-color);
+        
+    }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
