@@ -1,7 +1,7 @@
 const totalElement = document.getElementById("totalAmount");
 const addBtn = document.getElementById("addTransactionBtn");
 const transactionsTable = document.getElementById("transactionsTable");
-let lastTransactionId;
+let lastTransactionId = 0;
 let total;
 let totalIncome;
 let totalExpenses;
@@ -11,13 +11,15 @@ addBtn.addEventListener("click", addTransaction);
 
 function loadLocalData() {
     const myArrayFromLocalStorage = localStorage.getItem('myArray')
-    if (myArrayFromLocalStorage && myArrayFromLocalStorage.length) {
+    if (myArrayFromLocalStorage && myArrayFromLocalStorage.length>0) {
         allTransactionArray = JSON.parse(myArrayFromLocalStorage)
         getTotal();
         getTotalIncome();
         getTotalExpenses();
         drawAllTransactions();
         lastTransactionId = allTransactionArray[allTransactionArray.length - 1].id;
+    } else{
+        lastTransactionId = 0;
     }
 }
 function drawAllTransactions() {
@@ -114,10 +116,13 @@ function removeElement(transactionId) {
 function addTransaction() {
     const concept = document.getElementById("conceptInput");
     const amount = document.getElementById("amountInput");
-    if (concept.value != "" && amount.value != "") {
+    if(concept.value == ""){
+        window.alert("Por favor, añade un concepto.");
+    }else if(amount.value == "") {
+        window.alert("Por favor, añade una cantidad");
+    } else{
         amount.value = amount.value.replace(",", ".");
         if (!isNaN(parseFloat(amount.value))) {
-            console.log(amount.value);
             let id = lastTransactionId + 1
             let transaction = {
                 id: id,
@@ -131,12 +136,8 @@ function addTransaction() {
             drawTransaction(transaction, allTransactionArray.length);
             concept.value = "";
             amount.value = "";
-        } else {
-            window.alert("Tiene que ser un numero")
-        }
-    } else {
-        window.alert("Faltan datos");
     }
+}
 }
 
 function updateTotals(amountAdded) {
