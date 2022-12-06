@@ -74,7 +74,7 @@ table {
     margin-left: auto;
     margin-right: auto;
     border-collapse: separate;
-    width: 100%;
+    width: 90%;
   
 
 }
@@ -99,11 +99,12 @@ td {
 
 .card {
     margin-left: auto;
-    margin-left: auto;
+    margin-right: auto;
     padding: 0.5rem;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    margin-bottom: 1rem;
+    margin: 1rem;
+
 
 }
 

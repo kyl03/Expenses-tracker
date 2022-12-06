@@ -5,20 +5,22 @@ const transactionsTable = document.getElementById("transactionsTable");
 
 let allTransactionArray = [];
 
-const myArrayFromLocalStorage = localStorage.getItem('myArray')
 
-if (myArrayFromLocalStorage && myArrayFromLocalStorage.length) {
-    allTransactionArray = JSON.parse(myArrayFromLocalStorage)
-}
+
+
 
 
 addBtn.addEventListener("click", addTransaction);
 
-let lastId = 0;
-let total = 0.00;
-let totalIncome = 0.00;
-let totalExpenses = 0.00;
+let lastId ;
+let total ;
+let totalIncome ;
+let totalExpenses ;
 function loadLocalData() {
+    const myArrayFromLocalStorage = localStorage.getItem('myArray')
+    if (myArrayFromLocalStorage && myArrayFromLocalStorage.length) {
+        allTransactionArray = JSON.parse(myArrayFromLocalStorage)
+    }
 
     if (allTransactionArray.length > 0) {
         getTotal();
@@ -42,9 +44,9 @@ function getTotal() {
 
     if (total > 0) {
         totalElement.style.color = "rgb(59, 228, 59)";
-    } else {
+    } else{
         totalElement.style.color = "red"
-    }
+    } 
     showData(total, totalElement);
 
 }
@@ -91,9 +93,9 @@ function showTransaction(transaction, arrayPosition) {
     const transactionElement = document.createElement("tr");
     transactionElement.setAttribute("id", transaction.id);
     let borderRight;
-    if (transaction.amount > 0) {
+    if (transaction.amount >= 0) {
         borderRight = "5px solid rgb(59, 228, 59)";
-    } else {
+    } else  {
         borderRight = "5px solid red";
     }
     transactionElement.innerHTML =
