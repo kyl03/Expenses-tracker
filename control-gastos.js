@@ -11,7 +11,8 @@ addBtn.addEventListener("click", addTransaction);
 
 function loadLocalData() {
     const myArrayFromLocalStorage = localStorage.getItem('myArray')
-    if (myArrayFromLocalStorage && myArrayFromLocalStorage.length>0) {
+    if (myArrayFromLocalStorage!=null && JSON.parse(myArrayFromLocalStorage).length>0) {
+        console.log(myArrayFromLocalStorage.length);
         allTransactionArray = JSON.parse(myArrayFromLocalStorage)
         getTotal();
         getTotalIncome();
