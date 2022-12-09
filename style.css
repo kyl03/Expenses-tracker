@@ -206,12 +206,12 @@ button {
 
     table,
     hr {
-        width: 60%;
+        width: 70%;
 
     }
 
     .card{
-        width: 35%;
+        width: 70%;
         padding: 1rem;
         margin-left: auto;
         margin-right: auto;
@@ -247,6 +247,18 @@ button {
         background-color: var(--header-text-color);
         color: var(--header-color);
         
+    }
+    table,
+    hr {
+        width: 35%;
+
+    }
+
+    .card{
+        width: 35%;
+        padding: 1rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
