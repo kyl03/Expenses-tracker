@@ -11,7 +11,7 @@ addBtn.addEventListener("click", addTransaction);
 
 function loadLocalData() {
     const myArrayFromLocalStorage = localStorage.getItem('myArray')
-    if (myArrayFromLocalStorage!=null && JSON.parse(myArrayFromLocalStorage).length>0) {
+    if (myArrayFromLocalStorage != null && JSON.parse(myArrayFromLocalStorage).length > 0) {
         console.log(myArrayFromLocalStorage.length);
         allTransactionArray = JSON.parse(myArrayFromLocalStorage)
         getTotal();
@@ -19,7 +19,7 @@ function loadLocalData() {
         getTotalExpenses();
         drawAllTransactions();
         lastTransactionId = allTransactionArray[allTransactionArray.length - 1].id;
-    } else{
+    } else {
         lastTransactionId = 0;
     }
 }
@@ -117,11 +117,11 @@ function removeElement(transactionId) {
 function addTransaction() {
     const concept = document.getElementById("conceptInput");
     const amount = document.getElementById("amountInput");
-    if(concept.value == ""){
+    if (concept.value == "") {
         window.alert("Por favor, añade un concepto.");
-    }else if(amount.value == "") {
+    } else if (amount.value == "") {
         window.alert("Por favor, añade una cantidad");
-    } else{
+    } else {
         amount.value = amount.value.replace(",", ".");
         if (!isNaN(parseFloat(amount.value))) {
             let id = lastTransactionId + 1
@@ -137,8 +137,8 @@ function addTransaction() {
             drawTransaction(transaction, allTransactionArray.length);
             concept.value = "";
             amount.value = "";
+        }
     }
-}
 }
 
 function updateTotals(amountAdded) {
@@ -147,7 +147,7 @@ function updateTotals(amountAdded) {
     getTotalIncome();
     getTotal();
     localStorage.setItem('myArray', JSON.stringify(allTransactionArray));
-   
+
 
 }
 
