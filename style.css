@@ -27,9 +27,7 @@ body {
 }
 
 hr {
-    /* margin-right: 3rem;
-    margin-left: 3rem; */
-    margin-top: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 header {
@@ -134,9 +132,10 @@ td {
 }
 
 input {
-    margin: 0.40rem;
+    margin: 0.50rem;
     padding: 0.4rem;
     width: 50%;
+
 }
 
 button {

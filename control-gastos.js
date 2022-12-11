@@ -75,7 +75,7 @@ function getTotalIncome() {
 }
 
 function drawData(value, element) {
-    element.innerText = value;
+    element.innerText = Math.round(value * 100) / 100 + "$";
 }
 
 function drawTransaction(transaction) {
@@ -90,7 +90,7 @@ function drawTransaction(transaction) {
     transactionElement.innerHTML =
         `
     <td class="start">${transaction.concept}</td>
-    <td class="end" style="border-right: ${borderRight}">${transaction.amount}</td>
+    <td class="end" style="border-right: ${borderRight}">${Math.round(transaction.amount*100)/100}$</td>
     <button class="btn"onclick="askToConfirmRemoveAction(${transaction.id})">Borrar</button>
     `;
     transactionsTable.appendChild(transactionElement);
@@ -128,7 +128,7 @@ function addTransaction() {
             let transaction = {
                 id: id,
                 concept: concept.value,
-                amount: amount.value
+                amount: (Math.round(amount.value*100)/100)+""
             }
             allTransactionArray.push(transaction);
             localStorage.setItem('myArray', JSON.stringify(allTransactionArray));
